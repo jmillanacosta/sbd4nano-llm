@@ -1,0 +1,3 @@
+data/docs/*
+graphene_oxide_notebooks/assets/*
+*.pyc
