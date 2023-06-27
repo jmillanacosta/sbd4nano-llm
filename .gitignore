@@ -1,3 +1,7 @@
 data/docs/*
 graphene_oxide_notebooks/assets/*
 *.pyc
+data/chroma/*
+notebooks/assets/X-ELS-APIKEY
+notebooks/assets/openai_api_key
+notebooks/assets/huggingface_api_key
