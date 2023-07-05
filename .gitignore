@@ -14,3 +14,10 @@ question-answering/squad/squad_sbd4nano_go.json
 question-answering/squad/squad_sbd4nano_go.csv
 notebooks/squad_sbd4nano_go.json
 notebooks/squad_sbd4nano_go.csv
+data/go.tsv
+data/data/docs/test/chroma-collections.parquet
+data/data/docs/test/index/*
+.~*
+*pkl
+*tsv
+data/data/docs/test/chroma-embeddings.parquet
