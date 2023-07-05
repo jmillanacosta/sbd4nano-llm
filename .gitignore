@@ -5,3 +5,12 @@ data/chroma/*
 notebooks/assets/X-ELS-APIKEY
 notebooks/assets/openai_api_key
 notebooks/assets/huggingface_api_key
+question_answering/__pycache__/*
+question-answering/.env/*
+data/paperqa/docs.pickle
+data/chroma/*
+data/graphene_oxide.tsv
+question-answering/squad/squad_sbd4nano_go.json
+question-answering/squad/squad_sbd4nano_go.csv
+notebooks/squad_sbd4nano_go.json
+notebooks/squad_sbd4nano_go.csv
