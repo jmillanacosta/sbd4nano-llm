@@ -14590,7 +14590,47 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Paper-QA-for-Graphene-Oxide">Paper QA for Graphene Oxide<a class="anchor-link" href="#Paper-QA-for-Graphene-Oxide">&#182;</a></h1><p>We import a Zotero group library containing the following articles:</p>
+<ul>
+<li>10.1021/tx400385x</li>
+<li>10.1021/tx400385x</li>
+<li>10.1016/j.toxlet.2010.11.016</li>
+<li>10.1038/cdd.2010.11</li>
+<li>10.1016/j.biomaterials.2012.07.040</li>
+<li>10.1016/j.biomaterials.2012.02.021</li>
+<li>10.1021/nl202515a</li>
+<li>10.1007/s11671-010-9751-6</li>
+<li>10.1002/smll.201201546</li>
+<li>10.1021/nn101097v</li>
+<li>10.1021/nn202699t</li>
+<li>10.6023/A20060216</li>
+<li>10.3390/ijms221910578</li>
+<li>10.1021/am300253c</li>
+<li>10.1002/smll.201102743</li>
+<li>10.1021/acsomega.2c03171</li>
+<li>10.1016/j.envpol.2017.12.034</li>
+<li>10.1021/la203607w</li>
+<li>10.1021/nn1007176</li>
+<li>10.1016/j.biomaterials.2012.11.001</li>
+<li>10.1021/am300253c</li>
+<li>10.1016/j.biomaterials.2012.05.064</li>
+<li>10.1039/C2JM31396K</li>
+<li>10.1016/j.biomaterials.2013.01.001</li>
+</ul>
+<p>and use the <code>paperqa</code> library (a wrapper for <code>langchain</code> to perform question answering on journal articles).</p>
+<p>We define the prompt style to instruct the model to return its answer as a bullet point list, and then ask the following questions:</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14794,7 +14834,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Context">Context<a class="anchor-link" href="#Context">&#182;</a></h3>
+<h2 id="QUESTION-2">QUESTION 2<a class="anchor-link" href="#QUESTION-2">&#182;</a></h2><blockquote>
+<p>'How does size impact graphene uptake by the cell? On which cells?'</p>
+</blockquote>
+
 </div>
 </div>
 </div>
@@ -14803,7 +14846,201 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">q2</span> <span class="o">=</span> <span class="s1">&#39;How does size impact graphene uptake by the cell? On which cells?&#39;</span>
+<span class="n">answer2</span> <span class="o">=</span> <span class="n">docs</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">q2</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">max_sources</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**LLM ANSWER**:</span><span class="se">\n\n</span><span class="s1"> </span><span class="si">{</span><span class="n">answer2</span><span class="o">.</span><span class="n">answer</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-OutputArea-output " data-mime-type="text/markdown">
+<p><strong>LLM ANSWER</strong>:</p>
+<ul>
+<li>The size of graphene oxide (GO) sheets does not significantly affect the amount internalized by macrophages, but it does influence the intracellular location and the inflammatory response induced. Only two types of phagocytes were found capable of internalizing GO. (&quot;The role of the lateral dimension of graphene oxide in the regulation of cellular responses pages 1-1&quot;)</li>
+<li>The size of protein-coated graphene oxide nanosheets (PCGO) influences their uptake by cells. Smaller nanosheets are primarily taken up through a process called clathrin-mediated endocytosis, while larger nanosheets are more likely to be taken up through phagocytosis. (&quot;Size-Dependent Cell Uptake of Protein-Coated Graphene Oxide Nanosheets pages 1-1&quot;)</li>
+<li>The uptake of graphene by cells is influenced by its size, with different cellular responses observed based on the lateral dimensions of graphene oxide. In macrophages, particle size affects the cellular response. (&quot;The role of the lateral dimension of graphene oxide in the regulation of cellular responses pages 8-9&quot;)</li>
+<li>The effects of graphene oxide (GO) lateral dimension, from nano to micro, on cellular responses such as cellular uptake, internalization mechanisms, intracellular trafficking, and inflammation response were investigated in two types of macrophages and four non-phagocytic cells. (&quot;The role of the lateral dimension of graphene oxide in the regulation of cellular responses pages 2-2&quot;)</li>
+<li>The size of reduced graphene oxide nanoplatelets (rGONPs) significantly impacts their cytotoxic and genotoxic effects on human mesenchymal stem cells (hMSCs) isolated from umbilical cord blood. (&quot;Size-dependent genotoxicity of graphene nanoplatelets in human stem cells pages 1-1&quot;)</li>
+<li>The size of graphene oxide nanosheets (PCGOs) impacts their uptake by C2C12 cells, a cell line known to possess phagocytic activity. Larger nanosheets are predominantly taken up through phagocytosis, while smaller nanosheets primarily enter cells through clathrin-mediated endocytosis. (&quot;Size-Dependent Cell Uptake of Protein-Coated Graphene Oxide Nanosheets pages 6-7&quot;)</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="QUESTION-3">QUESTION 3<a class="anchor-link" href="#QUESTION-3">&#182;</a></h2><blockquote>
+<p>'How does surface functionalization affect graphene oxide interaction with the cell?'</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">q3</span> <span class="o">=</span> <span class="s1">&#39;How does surface functionalization affect graphene oxide interaction with the cell?&#39;</span>
+<span class="n">answer3</span> <span class="o">=</span> <span class="n">docs</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">q3</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">max_sources</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**LLM ANSWER**:</span><span class="se">\n\n</span><span class="s1"> </span><span class="si">{</span><span class="n">answer3</span><span class="o">.</span><span class="n">answer</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-OutputArea-output " data-mime-type="text/markdown">
+<p><strong>LLM ANSWER</strong>:</p>
+<ul>
+<li><p>Surface functionalization of graphene oxide (GO) significantly impacts its interaction with cells. Unmodified GO in serum absorbs a large amount of protein molecules, which can promote macrophage phagocytosis. However, surface-modified GO (GO-NH 2, GO-PAA, GO-PEG) significantly reduces protein adsorption and interaction with macrophages. The surface properties of GO can also affect its interaction with the cell membrane. Surface modifications can increase or decrease the interaction of GO with the cell membrane. For instance, PEG and PAA modifications can effectively reduce membrane abnormalities, membrane integrity damage, and membrane potential depolarization caused by GO. (&quot;Surface Chemical Modifications of Graphene Oxide and Interaction Mechanisms at the Nano-Bio Interface&quot; pages 7-8)</p>
+</li>
+<li><p>The primary mechanism of Au-GO (gold-graphene oxide) uptake is clathrin-mediated endocytosis, which is energy-dependent. The same experiment was conducted with GO (graphene oxide) alone, and the results were consistent, indicating that the presence of gold nanoparticles (Au NPs) did not alter the cellular uptake mechanism. (&quot;Mechanism of Cellular Uptake of Graphene Oxide Studied by Surface-Enhanced Raman Spectroscopy&quot; pages 6-6)</p>
+</li>
+<li><p>The surface of GO can be chemically modified to regulate its properties and design specific functionalities. The oxygen-containing functional groups on the surface of GO can be used to control its surface chemistry. These modifications can improve its dispersion, colloidal stability, and biocompatibility under physiological conditions. (&quot;Surface Chemical Modifications of Graphene Oxide and Interaction Mechanisms at the Nano-Bio Interface&quot; pages 1-2)</p>
+</li>
+<li><p>The size of GO sheets affected their internalization by different cell types, with only two types of phagocytes capable of internalizing GO. The study also found that GO sheets of different sizes (2mm and 350 nm) were equally taken up by macrophages, suggesting that size does not affect uptake. The study also found that micro-sized GO induced stronger inflammation responses than nano-sized GO. (&quot;The role of the lateral dimension of graphene oxide in the regulation of cellular responses&quot; pages 1-1)</p>
+</li>
+<li><p>Protein-coated graphene oxide (PCGO) adheres to the cell surface and is then internalized. This adhesion is hypothesized to be due to several factors, including the similar curvature between the nanosheets and plasma membrane, multiple binding forces such as electrostatic and hydrophobic interactions, and potential specific ligand-receptor interactions. (&quot;Size-Dependent Cell Uptake of Protein-Coated Graphene Oxide Nanosheets&quot; pages 3-4)</p>
+</li>
+<li><p>Smaller nanosheets primarily enter cells through clathrin-mediated endocytosis, while larger ones are more likely to be taken up through phagocytosis. (&quot;Size-Dependent Cell Uptake of Protein-Coated Graphene Oxide Nanosheets&quot; pages 1-1)</p>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="QUESTION-4">QUESTION 4<a class="anchor-link" href="#QUESTION-4">&#182;</a></h2><blockquote>
+<p>'Which functional groups in the surface of graphene oxide lead to increased uptake by the cell?'</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">q4</span> <span class="o">=</span> <span class="s1">&#39;Which functional groups in the surface of graphene oxide lead to increased uptake by the cell?&#39;</span>
+<span class="n">answer4</span> <span class="o">=</span> <span class="n">docs</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">q4</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">max_sources</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**LLM ANSWER**:</span><span class="se">\n\n</span><span class="s1"> </span><span class="si">{</span><span class="n">answer4</span><span class="o">.</span><span class="n">answer</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-OutputArea-output " data-mime-type="text/markdown">
+<p><strong>LLM ANSWER</strong>:</p>
+<p>Based on the provided context, the functional groups in the surface of graphene oxide that lead to increased uptake by the cell include:</p>
+<ul>
+<li>Oxygen-containing functional groups, which facilitate interaction with cell membranes (&quot;Surface Chemical Modifications of Graphene Oxide and Interaction Mechanisms at the Nano-Bio Interface&quot; pages 7-8).</li>
+<li>Carbon free radicals, present in highly hydroxylated GO, which can induce stronger lipid peroxidation and cell membrane damage (&quot;Surface Chemical Modifications of Graphene Oxide and Interaction Mechanisms at the Nano-Bio Interface&quot; pages 7-8).</li>
+<li>Carboxyl (C-COOH) and carbon-carbon groups (C-C and C=C), which contribute to higher molecular toxicity related to DNA damage stress, protein stress, and chemical stress (&quot;Dependence of Graphene Oxide (GO) Toxicity on Oxidation Level, Elemental Composition, and Size&quot; pages 11-12).</li>
+</ul>
+<p>The context does not provide sufficient information to identify additional functional groups on the surface of graphene oxide that could increase cellular uptake.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="CONTEXTS">CONTEXTS<a class="anchor-link" href="#CONTEXTS">&#182;</a></h2><h3 id="Question-1">Question 1<a class="anchor-link" href="#Question-1">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">__________</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;:</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">answer</span><span class="o">.</span><span class="n">dict</span><span class="p">()[</span><span class="s1">&#39;contexts&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;text&#39;</span><span class="p">][</span><span class="s1">&#39;doc&#39;</span><span class="p">][</span><span class="s1">&#39;citation&#39;</span><span class="p">],</span> <span class="n">answer</span><span class="o">.</span><span class="n">dict</span><span class="p">()[</span><span class="s1">&#39;contexts&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;text&#39;</span><span class="p">][</span><span class="s1">&#39;text&#39;</span><span class="p">],</span> <span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">answer</span><span class="o">.</span><span class="n">dict</span><span class="p">()[</span><span class="s1">&#39;contexts&#39;</span><span class="p">]))])))</span>
@@ -15042,10 +15279,7 @@ GO surface to facilitate the di</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="QUESTION-2">QUESTION 2<a class="anchor-link" href="#QUESTION-2">&#182;</a></h2><blockquote>
-<p>'How does size impact graphene uptake by the cell? On which cells?'</p>
-</blockquote>
-
+<h3 id="Question-2">Question 2<a class="anchor-link" href="#Question-2">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -15054,68 +15288,7 @@ GO surface to facilitate the di</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">q2</span> <span class="o">=</span> <span class="s1">&#39;How does size impact graphene uptake by the cell? On which cells?&#39;</span>
-<span class="n">answer2</span> <span class="o">=</span> <span class="n">docs</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">q2</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">max_sources</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**LLM ANSWER**:</span><span class="se">\n\n</span><span class="s1"> </span><span class="si">{</span><span class="n">answer2</span><span class="o">.</span><span class="n">answer</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-OutputArea-output " data-mime-type="text/markdown">
-<p><strong>LLM ANSWER</strong>:</p>
-<ul>
-<li>The size of graphene oxide (GO) sheets does not significantly affect the amount internalized by macrophages, but it does influence the intracellular location and the inflammatory response induced. Only two types of phagocytes were found capable of internalizing GO. (&quot;The role of the lateral dimension of graphene oxide in the regulation of cellular responses pages 1-1&quot;)</li>
-<li>The size of protein-coated graphene oxide nanosheets (PCGO) influences their uptake by cells. Smaller nanosheets are primarily taken up through a process called clathrin-mediated endocytosis, while larger nanosheets are more likely to be taken up through phagocytosis. (&quot;Size-Dependent Cell Uptake of Protein-Coated Graphene Oxide Nanosheets pages 1-1&quot;)</li>
-<li>The uptake of graphene by cells is influenced by its size, with different cellular responses observed based on the lateral dimensions of graphene oxide. In macrophages, particle size affects the cellular response. (&quot;The role of the lateral dimension of graphene oxide in the regulation of cellular responses pages 8-9&quot;)</li>
-<li>The effects of graphene oxide (GO) lateral dimension, from nano to micro, on cellular responses such as cellular uptake, internalization mechanisms, intracellular trafficking, and inflammation response were investigated in two types of macrophages and four non-phagocytic cells. (&quot;The role of the lateral dimension of graphene oxide in the regulation of cellular responses pages 2-2&quot;)</li>
-<li>The size of reduced graphene oxide nanoplatelets (rGONPs) significantly impacts their cytotoxic and genotoxic effects on human mesenchymal stem cells (hMSCs) isolated from umbilical cord blood. (&quot;Size-dependent genotoxicity of graphene nanoplatelets in human stem cells pages 1-1&quot;)</li>
-<li>The size of graphene oxide nanosheets (PCGOs) impacts their uptake by C2C12 cells, a cell line known to possess phagocytic activity. Larger nanosheets are predominantly taken up through phagocytosis, while smaller nanosheets primarily enter cells through clathrin-mediated endocytosis. (&quot;Size-Dependent Cell Uptake of Protein-Coated Graphene Oxide Nanosheets pages 6-7&quot;)</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Context">Context<a class="anchor-link" href="#Context">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">__________</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;:</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">answer2</span><span class="o">.</span><span class="n">dict</span><span class="p">()[</span><span class="s1">&#39;contexts&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;text&#39;</span><span class="p">][</span><span class="s1">&#39;doc&#39;</span><span class="p">][</span><span class="s1">&#39;citation&#39;</span><span class="p">],</span> <span class="n">answer2</span><span class="o">.</span><span class="n">dict</span><span class="p">()[</span><span class="s1">&#39;contexts&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;text&#39;</span><span class="p">][</span><span class="s1">&#39;text&#39;</span><span class="p">],</span> <span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">answer2</span><span class="o">.</span><span class="n">dict</span><span class="p">()[</span><span class="s1">&#39;contexts&#39;</span><span class="p">]))])))</span>
@@ -15502,10 +15675,7 @@ incubation time of 4 h, and reached a maximum at 6 h. After that the</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="QUESTION-3">QUESTION 3<a class="anchor-link" href="#QUESTION-3">&#182;</a></h2><blockquote>
-<p>'How does surface functionalization affect graphene oxide interaction with the cell?'</p>
-</blockquote>
-
+<h3 id="Question-3">Question 3<a class="anchor-link" href="#Question-3">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -15514,74 +15684,7 @@ incubation time of 4 h, and reached a maximum at 6 h. After that the</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">q3</span> <span class="o">=</span> <span class="s1">&#39;How does surface functionalization affect graphene oxide interaction with the cell?&#39;</span>
-<span class="n">answer3</span> <span class="o">=</span> <span class="n">docs</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">q3</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">max_sources</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**LLM ANSWER**:</span><span class="se">\n\n</span><span class="s1"> </span><span class="si">{</span><span class="n">answer3</span><span class="o">.</span><span class="n">answer</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-OutputArea-output " data-mime-type="text/markdown">
-<p><strong>LLM ANSWER</strong>:</p>
-<ul>
-<li><p>Surface functionalization of graphene oxide (GO) significantly impacts its interaction with cells. Unmodified GO in serum absorbs a large amount of protein molecules, which can promote macrophage phagocytosis. However, surface-modified GO (GO-NH 2, GO-PAA, GO-PEG) significantly reduces protein adsorption and interaction with macrophages. The surface properties of GO can also affect its interaction with the cell membrane. Surface modifications can increase or decrease the interaction of GO with the cell membrane. For instance, PEG and PAA modifications can effectively reduce membrane abnormalities, membrane integrity damage, and membrane potential depolarization caused by GO. (&quot;Surface Chemical Modifications of Graphene Oxide and Interaction Mechanisms at the Nano-Bio Interface&quot; pages 7-8)</p>
-</li>
-<li><p>The primary mechanism of Au-GO (gold-graphene oxide) uptake is clathrin-mediated endocytosis, which is energy-dependent. The same experiment was conducted with GO (graphene oxide) alone, and the results were consistent, indicating that the presence of gold nanoparticles (Au NPs) did not alter the cellular uptake mechanism. (&quot;Mechanism of Cellular Uptake of Graphene Oxide Studied by Surface-Enhanced Raman Spectroscopy&quot; pages 6-6)</p>
-</li>
-<li><p>The surface of GO can be chemically modified to regulate its properties and design specific functionalities. The oxygen-containing functional groups on the surface of GO can be used to control its surface chemistry. These modifications can improve its dispersion, colloidal stability, and biocompatibility under physiological conditions. (&quot;Surface Chemical Modifications of Graphene Oxide and Interaction Mechanisms at the Nano-Bio Interface&quot; pages 1-2)</p>
-</li>
-<li><p>The size of GO sheets affected their internalization by different cell types, with only two types of phagocytes capable of internalizing GO. The study also found that GO sheets of different sizes (2mm and 350 nm) were equally taken up by macrophages, suggesting that size does not affect uptake. The study also found that micro-sized GO induced stronger inflammation responses than nano-sized GO. (&quot;The role of the lateral dimension of graphene oxide in the regulation of cellular responses&quot; pages 1-1)</p>
-</li>
-<li><p>Protein-coated graphene oxide (PCGO) adheres to the cell surface and is then internalized. This adhesion is hypothesized to be due to several factors, including the similar curvature between the nanosheets and plasma membrane, multiple binding forces such as electrostatic and hydrophobic interactions, and potential specific ligand-receptor interactions. (&quot;Size-Dependent Cell Uptake of Protein-Coated Graphene Oxide Nanosheets&quot; pages 3-4)</p>
-</li>
-<li><p>Smaller nanosheets primarily enter cells through clathrin-mediated endocytosis, while larger ones are more likely to be taken up through phagocytosis. (&quot;Size-Dependent Cell Uptake of Protein-Coated Graphene Oxide Nanosheets&quot; pages 1-1)</p>
-</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Context">Context<a class="anchor-link" href="#Context">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">__________</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;:</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">answer3</span><span class="o">.</span><span class="n">dict</span><span class="p">()[</span><span class="s1">&#39;contexts&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;text&#39;</span><span class="p">][</span><span class="s1">&#39;doc&#39;</span><span class="p">][</span><span class="s1">&#39;citation&#39;</span><span class="p">],</span> <span class="n">answer3</span><span class="o">.</span><span class="n">dict</span><span class="p">()[</span><span class="s1">&#39;contexts&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;text&#39;</span><span class="p">][</span><span class="s1">&#39;text&#39;</span><span class="p">],</span> <span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">answer3</span><span class="o">.</span><span class="n">dict</span><span class="p">()[</span><span class="s1">&#39;contexts&#39;</span><span class="p">]))])))</span>
@@ -16055,10 +16158,7 @@ insoluble anti-cancer drugs ( e.g. hydr</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="QUESTION-4">QUESTION 4<a class="anchor-link" href="#QUESTION-4">&#182;</a></h2><blockquote>
-<p>'Which functional groups in the surface of graphene oxide lead to increased uptake by the cell?'</p>
-</blockquote>
-
+<h3 id="Question-4">Question 4<a class="anchor-link" href="#Question-4">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -16067,67 +16167,7 @@ insoluble anti-cancer drugs ( e.g. hydr</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">q4</span> <span class="o">=</span> <span class="s1">&#39;Which functional groups in the surface of graphene oxide lead to increased uptake by the cell?&#39;</span>
-<span class="n">answer4</span> <span class="o">=</span> <span class="n">docs</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">q4</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">max_sources</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**LLM ANSWER**:</span><span class="se">\n\n</span><span class="s1"> </span><span class="si">{</span><span class="n">answer4</span><span class="o">.</span><span class="n">answer</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-OutputArea-output " data-mime-type="text/markdown">
-<p><strong>LLM ANSWER</strong>:</p>
-<p>Based on the provided context, the functional groups in the surface of graphene oxide that lead to increased uptake by the cell include:</p>
-<ul>
-<li>Oxygen-containing functional groups, which facilitate interaction with cell membranes (&quot;Surface Chemical Modifications of Graphene Oxide and Interaction Mechanisms at the Nano-Bio Interface&quot; pages 7-8).</li>
-<li>Carbon free radicals, present in highly hydroxylated GO, which can induce stronger lipid peroxidation and cell membrane damage (&quot;Surface Chemical Modifications of Graphene Oxide and Interaction Mechanisms at the Nano-Bio Interface&quot; pages 7-8).</li>
-<li>Carboxyl (C-COOH) and carbon-carbon groups (C-C and C=C), which contribute to higher molecular toxicity related to DNA damage stress, protein stress, and chemical stress (&quot;Dependence of Graphene Oxide (GO) Toxicity on Oxidation Level, Elemental Composition, and Size&quot; pages 11-12).</li>
-</ul>
-<p>The context does not provide sufficient information to identify additional functional groups on the surface of graphene oxide that could increase cellular uptake.</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Context">Context<a class="anchor-link" href="#Context">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">__________</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;:</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">answer4</span><span class="o">.</span><span class="n">dict</span><span class="p">()[</span><span class="s1">&#39;contexts&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;text&#39;</span><span class="p">][</span><span class="s1">&#39;doc&#39;</span><span class="p">][</span><span class="s1">&#39;citation&#39;</span><span class="p">],</span> <span class="n">answer4</span><span class="o">.</span><span class="n">dict</span><span class="p">()[</span><span class="s1">&#39;contexts&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;text&#39;</span><span class="p">][</span><span class="s1">&#39;text&#39;</span><span class="p">],</span> <span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">answer4</span><span class="o">.</span><span class="n">dict</span><span class="p">()[</span><span class="s1">&#39;contexts&#39;</span><span class="p">]))])))</span>
