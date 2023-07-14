@@ -21,3 +21,5 @@ data/data/docs/test/index/*
 *pkl
 *tsv
 data/data/docs/test/chroma-embeddings.parquet
+notebooks/assets/zotero_api_key
+notebooks/assets/zotero_user_id
